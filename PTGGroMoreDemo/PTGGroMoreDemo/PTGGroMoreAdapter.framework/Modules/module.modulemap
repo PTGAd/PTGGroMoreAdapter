@@ -1,0 +1,6 @@
+framework module PTGGroMoreAdapter {
+  umbrella header "PTGGroMoreAdapter.h"
+  export *
+
+  module * { export * }
+}

@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21AF7C06E34660128115E6F3 /* Pods_PTGGroMoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; };
+		9E1890282DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; };
+		9E1890292DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E8569DF2DB4D4B100CE37CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D32DB4D4B100CE37CA /* Assets.xcassets */; };
+		9E8569E12DB4D4B100CE37CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D62DB4D4B100CE37CA /* LaunchScreen.storyboard */; };
+		9E8569E22DB4D4B100CE37CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D92DB4D4B100CE37CA /* Main.storyboard */; };
+		9E8569E32DB4D4B100CE37CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8569D22DB4D4B100CE37CA /* AppDelegate.m */; };
+		9E8569E42DB4D4B100CE37CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8569D72DB4D4B100CE37CA /* main.m */; };
+		9E8569E62DB4D4B100CE37CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8569DD2DB4D4B100CE37CA /* ViewController.m */; };
+		9EA4A8622DB5DAC4001F03D2 /* BaseAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8612DB5DAC4001F03D2 /* BaseAdViewController.m */; };
+		9EA4A8672DB5DB39001F03D2 /* PTGSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8662DB5DB39001F03D2 /* PTGSplashViewController.m */; };
+		9EA4A86B2DB5DD91001F03D2 /* PTGBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A86A2DB5DD91001F03D2 /* PTGBannerViewController.m */; };
+		9EA4A87D2DB5ECC1001F03D2 /* PTGInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A87C2DB5ECC1001F03D2 /* PTGInterstitialViewController.m */; };
+		9EA4A8B42DB61D6C001F03D2 /* PTGGMNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8B32DB61D6C001F03D2 /* PTGGMNativeViewController.m */; };
+		9EA4A8C72DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8C62DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.m */; };
+		9EA4A8CA2DB72107001F03D2 /* PTGGMNativeSelfRenderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8C92DB72107001F03D2 /* PTGGMNativeSelfRenderCell.m */; };
+		9EA4A8D82DB733B1001F03D2 /* BUDFeedStyleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8D72DB733B1001F03D2 /* BUDFeedStyleHelper.m */; };
+		9EA4A9CF2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA4A9CE2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E1890132DB4D5560081D584 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9E1890292DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0BD4A0D0AC1A6E81112D9E13 /* Pods-PTGGroMoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGGroMoreDemo.release.xcconfig"; path = "Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6EB28D543F3B88D80E5DDD4E /* Pods-PTGGroMoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGGroMoreDemo.debug.xcconfig"; path = "Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9E8569B42DB4D4A900CE37CA /* PTGGroMoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTGGroMoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E8569D12DB4D4B100CE37CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9E8569D22DB4D4B100CE37CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9E8569D32DB4D4B100CE37CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E8569D42DB4D4B100CE37CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E8569D52DB4D4B100CE37CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E8569D72DB4D4B100CE37CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E8569D82DB4D4B100CE37CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E8569DC2DB4D4B100CE37CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9E8569DD2DB4D4B100CE37CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9EA4A8602DB5DAC4001F03D2 /* BaseAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAdViewController.h; sourceTree = "<group>"; };
+		9EA4A8612DB5DAC4001F03D2 /* BaseAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAdViewController.m; sourceTree = "<group>"; };
+		9EA4A8652DB5DB39001F03D2 /* PTGSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGSplashViewController.h; sourceTree = "<group>"; };
+		9EA4A8662DB5DB39001F03D2 /* PTGSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGSplashViewController.m; sourceTree = "<group>"; };
+		9EA4A8692DB5DD91001F03D2 /* PTGBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGBannerViewController.h; sourceTree = "<group>"; };
+		9EA4A86A2DB5DD91001F03D2 /* PTGBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGBannerViewController.m; sourceTree = "<group>"; };
+		9EA4A87B2DB5ECC1001F03D2 /* PTGInterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGInterstitialViewController.h; sourceTree = "<group>"; };
+		9EA4A87C2DB5ECC1001F03D2 /* PTGInterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGInterstitialViewController.m; sourceTree = "<group>"; };
+		9EA4A8B22DB61D6C001F03D2 /* PTGGMNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGGMNativeViewController.h; sourceTree = "<group>"; };
+		9EA4A8B32DB61D6C001F03D2 /* PTGGMNativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGGMNativeViewController.m; sourceTree = "<group>"; };
+		9EA4A8C52DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGGMNativeSelfRenderViewController.h; sourceTree = "<group>"; };
+		9EA4A8C62DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGGMNativeSelfRenderViewController.m; sourceTree = "<group>"; };
+		9EA4A8C82DB72107001F03D2 /* PTGGMNativeSelfRenderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGGMNativeSelfRenderCell.h; sourceTree = "<group>"; };
+		9EA4A8C92DB72107001F03D2 /* PTGGMNativeSelfRenderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGGMNativeSelfRenderCell.m; sourceTree = "<group>"; };
+		9EA4A8D62DB733B1001F03D2 /* BUDFeedStyleHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUDFeedStyleHelper.h; sourceTree = "<group>"; };
+		9EA4A8D72DB733B1001F03D2 /* BUDFeedStyleHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BUDFeedStyleHelper.m; sourceTree = "<group>"; };
+		9EA4A8D92DB733D1001F03D2 /* BUDMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUDMacros.h; sourceTree = "<group>"; };
+		9EA4A9CE2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTGGroMoreAdapter.framework; sourceTree = "<group>"; };
+		DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTGGroMoreDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E8569B12DB4D4A900CE37CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21AF7C06E34660128115E6F3 /* Pods_PTGGroMoreDemo.framework in Frameworks */,
+				9EA4A9CF2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework in Frameworks */,
+				9E1890282DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E8569AB2DB4D4A900CE37CA = {
+			isa = PBXGroup;
+			children = (
+				9E8569DE2DB4D4B100CE37CA /* PTGGroMoreDemo */,
+				9E8569B52DB4D4A900CE37CA /* Products */,
+				ECAAD2DC14E6FCD0BC6932BD /* Pods */,
+				D15C53DF3A44ED02471470C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9E8569B52DB4D4A900CE37CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E8569B42DB4D4A900CE37CA /* PTGGroMoreDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E8569DE2DB4D4B100CE37CA /* PTGGroMoreDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A9CE2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework */,
+				9EA4A8B12DB61D12001F03D2 /* Native */,
+				9EA4A8702DB5E7D7001F03D2 /* Interstitial */,
+				9EA4A8682DB5DD7E001F03D2 /* Banner */,
+				9EA4A8602DB5DAC4001F03D2 /* BaseAdViewController.h */,
+				9EA4A8612DB5DAC4001F03D2 /* BaseAdViewController.m */,
+				9EA4A85F2DB5DA73001F03D2 /* Splash */,
+				9E8569D12DB4D4B100CE37CA /* AppDelegate.h */,
+				9E8569D22DB4D4B100CE37CA /* AppDelegate.m */,
+				9E8569D32DB4D4B100CE37CA /* Assets.xcassets */,
+				9E8569D42DB4D4B100CE37CA /* Info.plist */,
+				9E8569D62DB4D4B100CE37CA /* LaunchScreen.storyboard */,
+				9E8569D72DB4D4B100CE37CA /* main.m */,
+				9E8569D92DB4D4B100CE37CA /* Main.storyboard */,
+				9E8569DC2DB4D4B100CE37CA /* ViewController.h */,
+				9E8569DD2DB4D4B100CE37CA /* ViewController.m */,
+			);
+			path = PTGGroMoreDemo;
+			sourceTree = "<group>";
+		};
+		9EA4A85F2DB5DA73001F03D2 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A8652DB5DB39001F03D2 /* PTGSplashViewController.h */,
+				9EA4A8662DB5DB39001F03D2 /* PTGSplashViewController.m */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		9EA4A8682DB5DD7E001F03D2 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A8692DB5DD91001F03D2 /* PTGBannerViewController.h */,
+				9EA4A86A2DB5DD91001F03D2 /* PTGBannerViewController.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		9EA4A8702DB5E7D7001F03D2 /* Interstitial */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A87B2DB5ECC1001F03D2 /* PTGInterstitialViewController.h */,
+				9EA4A87C2DB5ECC1001F03D2 /* PTGInterstitialViewController.m */,
+			);
+			path = Interstitial;
+			sourceTree = "<group>";
+		};
+		9EA4A8B12DB61D12001F03D2 /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A8D92DB733D1001F03D2 /* BUDMacros.h */,
+				9EA4A8D62DB733B1001F03D2 /* BUDFeedStyleHelper.h */,
+				9EA4A8D72DB733B1001F03D2 /* BUDFeedStyleHelper.m */,
+				9EA4A8B22DB61D6C001F03D2 /* PTGGMNativeViewController.h */,
+				9EA4A8B32DB61D6C001F03D2 /* PTGGMNativeViewController.m */,
+				9EA4A8C52DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.h */,
+				9EA4A8C62DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.m */,
+				9EA4A8C82DB72107001F03D2 /* PTGGMNativeSelfRenderCell.h */,
+				9EA4A8C92DB72107001F03D2 /* PTGGMNativeSelfRenderCell.m */,
+			);
+			path = Native;
+			sourceTree = "<group>";
+		};
+		D15C53DF3A44ED02471470C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECAAD2DC14E6FCD0BC6932BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EB28D543F3B88D80E5DDD4E /* Pods-PTGGroMoreDemo.debug.xcconfig */,
+				0BD4A0D0AC1A6E81112D9E13 /* Pods-PTGGroMoreDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E8569B32DB4D4A900CE37CA /* PTGGroMoreDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E8569CC2DB4D4AB00CE37CA /* Build configuration list for PBXNativeTarget "PTGGroMoreDemo" */;
+			buildPhases = (
+				324434B76DBD9B666009C8F3 /* [CP] Check Pods Manifest.lock */,
+				9E8569B02DB4D4A900CE37CA /* Sources */,
+				9E8569B12DB4D4A900CE37CA /* Frameworks */,
+				9E8569B22DB4D4A900CE37CA /* Resources */,
+				F274A52732E2DACDD6767FDD /* [CP] Copy Pods Resources */,
+				9E1890132DB4D5560081D584 /* Embed Frameworks */,
+				E8E55C83B4D7B37088F62650 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTGGroMoreDemo;
+			productName = PTGGroMoreDemo;
+			productReference = 9E8569B42DB4D4A900CE37CA /* PTGGroMoreDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E8569AC2DB4D4A900CE37CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					9E8569B32DB4D4A900CE37CA = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 9E8569AF2DB4D4A900CE37CA /* Build configuration list for PBXProject "PTGGroMoreDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E8569AB2DB4D4A900CE37CA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9E8569B52DB4D4A900CE37CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E8569B32DB4D4A900CE37CA /* PTGGroMoreDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E8569B22DB4D4A900CE37CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E8569DF2DB4D4B100CE37CA /* Assets.xcassets in Resources */,
+				9E8569E12DB4D4B100CE37CA /* LaunchScreen.storyboard in Resources */,
+				9E8569E22DB4D4B100CE37CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		324434B76DBD9B666009C8F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PTGGroMoreDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8E55C83B4D7B37088F62650 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F274A52732E2DACDD6767FDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E8569B02DB4D4A900CE37CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA4A8C72DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.m in Sources */,
+				9EA4A86B2DB5DD91001F03D2 /* PTGBannerViewController.m in Sources */,
+				9EA4A8CA2DB72107001F03D2 /* PTGGMNativeSelfRenderCell.m in Sources */,
+				9EA4A8622DB5DAC4001F03D2 /* BaseAdViewController.m in Sources */,
+				9E8569E32DB4D4B100CE37CA /* AppDelegate.m in Sources */,
+				9EA4A8B42DB61D6C001F03D2 /* PTGGMNativeViewController.m in Sources */,
+				9E8569E42DB4D4B100CE37CA /* main.m in Sources */,
+				9EA4A8D82DB733B1001F03D2 /* BUDFeedStyleHelper.m in Sources */,
+				9E8569E62DB4D4B100CE37CA /* ViewController.m in Sources */,
+				9EA4A8672DB5DB39001F03D2 /* PTGSplashViewController.m in Sources */,
+				9EA4A87D2DB5ECC1001F03D2 /* PTGInterstitialViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9E8569D62DB4D4B100CE37CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E8569D52DB4D4B100CE37CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9E8569D92DB4D4B100CE37CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E8569D82DB4D4B100CE37CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E8569CD2DB4D4AB00CE37CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EB28D543F3B88D80E5DDD4E /* Pods-PTGGroMoreDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5SRZ3HM32;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTGGroMoreDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PTGGroMoreDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PTGGroMoreAdapter.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E8569CE2DB4D4AB00CE37CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BD4A0D0AC1A6E81112D9E13 /* Pods-PTGGroMoreDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5SRZ3HM32;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTGGroMoreDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PTGGroMoreDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PTGGroMoreAdapter.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9E8569CF2DB4D4AB00CE37CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9E8569D02DB4D4AB00CE37CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E8569AF2DB4D4A900CE37CA /* Build configuration list for PBXProject "PTGGroMoreDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E8569CF2DB4D4AB00CE37CA /* Debug */,
+				9E8569D02DB4D4AB00CE37CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E8569CC2DB4D4AB00CE37CA /* Build configuration list for PBXNativeTarget "PTGGroMoreDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E8569CD2DB4D4AB00CE37CA /* Debug */,
+				9E8569CE2DB4D4AB00CE37CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E8569AC2DB4D4A900CE37CA /* Project object */;
+}
