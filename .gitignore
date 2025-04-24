@@ -1,44 +1,100 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# ====================
+# CocoaPods 依赖目录
+# ====================
+**/Pods/
 
-## User settings
-xcuserdata/
+# ====================
+# macOS 系统文件
+# ====================
+**/.DS_Store
 
-## Obj-C/Swift specific
-*.hmap
+# ====================
+# Xcode build 产物和缓存
+# ====================
+**/build/
+**/DerivedData/
 
-## App packaging
-*.ipa
+# ====================
+# Xcode 项目工作区、用户设置、状态文件
+# ====================
+**/*.xcworkspace
+**/*.xcuserstate
+**/xcuserdata/
+**/*.xcscmblueprint
+
+# ====================
+# JetBrains / AppCode / CLion / IDEA 工具配置
+# ====================
+**/.idea/
+**/*.iml
+
+# ====================
+# SwiftPM 缓存
+# ====================
+.swiftpm/
+.build/
+Package.resolved
+Package.pins
+
+# ====================
+# fastlane 临时和输出目录
+# ====================
+fastlane/report.xml
+fastlane/screenshots
+fastlane/test_output
+
+# ====================
+# Carthage 依赖目录
+# ====================
+Carthage/Build/
+
+# ====================
+# Xcode Archives 导出包
+# ====================
+*.xcarchive
+
+# ====================
+# ModuleCache 临时目录
+# ====================
+ModuleCache.noindex/
+
+# ====================
+# 单元测试生成文件
+# ====================
+*.gcno
+*.gcda
+*.profraw
+
+# ====================
+# Crashlytics / Fabric
+# ====================
 *.dSYM.zip
 *.dSYM
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# ====================
+# Firebase 配置文件
+# ====================
+GoogleService-Info.plist
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# ====================
+# 本地配置 / 环境变量文件
+# ====================
+*.local
+.env
+.env.*
 
-Carthage/Build/
+# ====================
+# 日志、锁文件
+# ====================
+*.log
+*.lock
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+# ====================
+# CocoaPods 仓库缓存（可选）
+# ====================
+# ~/.cocoapods/repos/
 
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+# ====================
+# Xcode Preview 预览资源
+# ====================
+Preview Content/
