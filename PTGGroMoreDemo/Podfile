@@ -15,7 +15,8 @@ target 'PTGGroMoreDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Ads-CN-Beta', '~> 6.8.0.5', :subspecs => ['CSJMediation']
-  pod 'PTGAdFramework', '~> 2.2.64'
+  pod 'PTGAdFramework', '2.2.72'
+  pod 'PTGGroMoreAdapter','2.2.72.0'
   pod 'YYCategories'
   pod 'Masonry'
   pod 'SDWebImage'

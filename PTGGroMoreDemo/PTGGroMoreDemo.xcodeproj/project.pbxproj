@@ -10,6 +10,7 @@
 		21AF7C06E34660128115E6F3 /* Pods_PTGGroMoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; };
 		9E1890282DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; };
 		9E1890292DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E3B41DE2DE417E3001082EC /* PTGGroMoreAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3B41DD2DE417E3001082EC /* PTGGroMoreAdapter.framework */; };
 		9E8569DF2DB4D4B100CE37CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D32DB4D4B100CE37CA /* Assets.xcassets */; };
 		9E8569E12DB4D4B100CE37CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D62DB4D4B100CE37CA /* LaunchScreen.storyboard */; };
 		9E8569E22DB4D4B100CE37CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D92DB4D4B100CE37CA /* Main.storyboard */; };
@@ -24,7 +25,6 @@
 		9EA4A8C72DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8C62DB63CC4001F03D2 /* PTGGMNativeSelfRenderViewController.m */; };
 		9EA4A8CA2DB72107001F03D2 /* PTGGMNativeSelfRenderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8C92DB72107001F03D2 /* PTGGMNativeSelfRenderCell.m */; };
 		9EA4A8D82DB733B1001F03D2 /* BUDFeedStyleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A8D72DB733B1001F03D2 /* BUDFeedStyleHelper.m */; };
-		9EA4A9CF2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA4A9CE2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +44,7 @@
 /* Begin PBXFileReference section */
 		0BD4A0D0AC1A6E81112D9E13 /* Pods-PTGGroMoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGGroMoreDemo.release.xcconfig"; path = "Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6EB28D543F3B88D80E5DDD4E /* Pods-PTGGroMoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGGroMoreDemo.debug.xcconfig"; path = "Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9E3B41DD2DE417E3001082EC /* PTGGroMoreAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTGGroMoreAdapter.framework; sourceTree = "<group>"; };
 		9E8569B42DB4D4A900CE37CA /* PTGGroMoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTGGroMoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8569D12DB4D4B100CE37CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E8569D22DB4D4B100CE37CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		9EA4A8D62DB733B1001F03D2 /* BUDFeedStyleHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUDFeedStyleHelper.h; sourceTree = "<group>"; };
 		9EA4A8D72DB733B1001F03D2 /* BUDFeedStyleHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BUDFeedStyleHelper.m; sourceTree = "<group>"; };
 		9EA4A8D92DB733D1001F03D2 /* BUDMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUDMacros.h; sourceTree = "<group>"; };
-		9EA4A9CE2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTGGroMoreAdapter.framework; sourceTree = "<group>"; };
 		DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTGGroMoreDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,7 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21AF7C06E34660128115E6F3 /* Pods_PTGGroMoreDemo.framework in Frameworks */,
-				9EA4A9CF2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework in Frameworks */,
+				9E3B41DE2DE417E3001082EC /* PTGGroMoreAdapter.framework in Frameworks */,
 				9E1890282DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +110,7 @@
 		9E8569DE2DB4D4B100CE37CA /* PTGGroMoreDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9EA4A9CE2DB9E4D8001F03D2 /* PTGGroMoreAdapter.framework */,
+				9E3B41DD2DE417E3001082EC /* PTGGroMoreAdapter.framework */,
 				9EA4A8B12DB61D12001F03D2 /* Native */,
 				9EA4A8702DB5E7D7001F03D2 /* Interstitial */,
 				9EA4A8682DB5DD7E001F03D2 /* Banner */,

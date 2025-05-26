@@ -8,31 +8,20 @@
 #import "PTGGMNativeViewController.h"
 #import <Masonry/Masonry.h>
 
-@interface PTGGMNativeViewController ()<BUNativeExpressAdViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface PTGGMNativeViewController ()<BUNativeExpressAdViewDelegate>
 
 @property(nonatomic,strong)BUNativeExpressAdManager *adManager;
-@property(nonatomic,strong)NSMutableArray<BUNativeExpressAdView *> *ads;
-@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)BUNativeExpressAdView *expressAdView;
 @end
 
 @implementation PTGGMNativeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.showAdButton.hidden = YES;
-    self.ads = [NSMutableArray new];
-    [self addChildViewsAndLayout];
-}
-
-- (void)addChildViewsAndLayout {
-    [self.view insertSubview:self.tableView atIndex:0];
-    
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
 }
 
 - (void)loadAd:(UIButton *)sender {
+    self.statusLabel.text = @"广告加载中";
     BUAdSlot *slot1 = [[BUAdSlot alloc] init];
     slot1.mediation.bidNotify = YES;
     slot1.ID = @"103451853";
@@ -47,33 +36,25 @@
     [self.adManager loadAdDataWithCount:1];
 }
 
-- (void)showAd:(UIButton *)sender { }
-
-#pragma mark - UITableViewDataSource -
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.ads.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *identifier = NSStringFromClass(UITableViewCell.class);
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [[cell.contentView viewWithTag:100002] removeFromSuperview];
-    BUNativeExpressAdView *ad = self.ads[indexPath.row];
-    ad.tag = 100002;
-    [cell.contentView addSubview:ad];
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return self.ads[indexPath.row].bounds.size.height;
+- (void)showAd:(UIButton *)sender {
+    if (self.expressAdView.isReady) {
+        [[self.view viewWithTag:10001] removeFromSuperview];
+        self.statusLabel.text = @"广告展示成功";
+        CGRect frame = self.expressAdView.frame;
+        frame.origin.y = 100;
+        self.expressAdView.frame = frame;
+        self.expressAdView.tag = 10001;
+        [self.view addSubview:self.expressAdView];
+    } else {
+        self.statusLabel.text = @"广告已过期";
+    }
 }
 
 /**
  * Sent when views successfully load ad
  */
 - (void)nativeExpressAdSuccessToLoad:(BUNativeExpressAdManager *)nativeExpressAdManager views:(NSArray<__kindof BUNativeExpressAdView *> *)views {
+    self.statusLabel.text = @"广告加载成功";
     NSLog(@"信息流加载成功");
     [views enumerateObjectsUsingBlock:^(__kindof BUNativeExpressAdView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj render];
@@ -86,6 +67,7 @@
  */
 - (void)nativeExpressAdFailToLoad:(BUNativeExpressAdManager *)nativeExpressAdManager error:(NSError *_Nullable)error {
     NSLog(@"信息流加载失败 error = %@",error);
+    self.statusLabel.text = @"广告加载失败";
 }
 
 /**
@@ -93,8 +75,10 @@
  */
 - (void)nativeExpressAdViewRenderSuccess:(BUNativeExpressAdView *)nativeExpressAdView {
     NSLog(@"信息流渲染成功");
-    [self.ads addObject:nativeExpressAdView];
-    [self.tableView reloadData];
+    self.statusLabel.text = @"广告渲染成功";
+    self.expressAdView = nativeExpressAdView;
+//    [self.ads addObject:nativeExpressAdView];
+//    [self.tableView reloadData];
 }
 
 /**
@@ -102,7 +86,7 @@
  */
 - (void)nativeExpressAdViewRenderFail:(BUNativeExpressAdView *)nativeExpressAdView error:(NSError *_Nullable)error {
     NSLog(@"信息流渲染失败 error =%@",error);
-    
+    self.statusLabel.text = @"广告渲染失败";
 }
 
 /**
@@ -141,8 +125,10 @@ Sent when a playerw playback status changed.
  */
 - (void)nativeExpressAdView:(BUNativeExpressAdView *)nativeExpressAdView dislikeWithReason:(NSArray<BUDislikeWords *> *)filterWords {
     NSLog(@"信息流关闭");
-    [self.ads removeObject:nativeExpressAdView];
-    [self.tableView reloadData];
+    self.expressAdView = nil;
+    [nativeExpressAdView removeFromSuperview];
+//    [self.ads removeObject:nativeExpressAdView];
+//    [self.tableView reloadData];
 }
 
 /**
@@ -169,16 +155,4 @@ Sent when a playerw playback status changed.
     
 }
 
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.backgroundColor = [UIColor clearColor];
-        [_tableView registerClass:UITableViewCell.class forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
-    }
-    return _tableView;
-}
 @end

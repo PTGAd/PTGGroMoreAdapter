@@ -17,31 +17,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.showAdButton.hidden = YES;
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)loadAd:(UIButton *)sender {
     BUAdSlot *slot = [[BUAdSlot alloc]init];
     slot.ID = @"103451486";
     slot.mediation.bidNotify = YES;
+    self.statusLabel.text = @"广告加载中";
     self.banner = [[BUNativeExpressBannerView alloc] initWithSlot:slot rootViewController:self adSize:CGSizeMake(300, 80)];
     self.banner.delegate = self;
     [self.banner loadAdData];
 }
 
 - (void)showAd:(UIButton *)sender {
-    
+    if (self.banner.mediation.isReady) {
+        [self.view addSubview:self.banner];
+        CGPoint origin = CGPointMake((UIScreen.mainScreen.bounds.size.width - self.banner.frame.size.width) / 2, 200);
+        CGRect frame = self.banner.frame;
+        frame.origin = origin;
+        self.banner.frame = frame;
+        self.statusLabel.text = @"广告已展示";
+    } else {
+        self.statusLabel.text = @"广告已过期";
+    }
 }
 
 #pragma mark - BUMNativeExpressBannerViewDelegate -
 - (void)nativeExpressBannerAdViewDidLoad:(BUNativeExpressBannerView *)bannerAdView {
-    [self.view addSubview:bannerAdView];
-    CGPoint origin = CGPointMake((UIScreen.mainScreen.bounds.size.width - bannerAdView.frame.size.width) / 2, 200);
-    CGRect frame = bannerAdView.frame;
-    frame.origin = origin;
-    bannerAdView.frame = frame;
     NSLog(@"banner加载成功");
+    self.statusLabel.text = @"广告加载成功";
 }
 
 /**
@@ -50,6 +55,7 @@ This method is called when bannerAdView ad slot failed to load.
 */
 - (void)nativeExpressBannerAdView:(BUNativeExpressBannerView *)bannerAdView didLoadFailWithError:(NSError *_Nullable)error {
     NSLog(@"banner加载失败 error = %@",error);
+    self.statusLabel.text = @"广告加载失败";
 }
 
 /**
@@ -57,7 +63,7 @@ This method is called when rendering a nativeExpressAdView successed.
 */
 // Mediation:/// @Note :  (针对聚合维度广告)<6400版本不会回调该方法，>=6400开始会回调该方法，但不代表最终展示广告的渲染结果。
 - (void)nativeExpressBannerAdViewRenderSuccess:(BUNativeExpressBannerView *)bannerAdView {
-    
+    self.statusLabel.text = @"广告渲染成功";
 }
 
 /**
@@ -66,7 +72,7 @@ This method is called when a nativeExpressAdView failed to render.
 */
 // Mediation:/// @Note :  (针对聚合维度广告)<6400版本不会回调该方法，>=6400开始会回调该方法，但不代表最终展示广告的渲染结果。
 - (void)nativeExpressBannerAdViewRenderFail:(BUNativeExpressBannerView *)bannerAdView error:(NSError * __nullable)error {
-    
+    self.statusLabel.text = @"广告渲染失败";
 }
 
 /**

@@ -24,6 +24,13 @@
     if (self.isLoading) {
         return;
     }
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 120)];
+    bottomView.backgroundColor = [UIColor whiteColor];
+    UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SplashLogo"]];
+    logo.accessibilityIdentifier = @"splash_logo";
+    logo.frame = CGRectMake(0, 0, 311, 47);
+    logo.center = bottomView.center;
+    [bottomView addSubview:logo];
     self.isLoading = YES;
     self.statusLabel.text = @"开始加载中";
     BUAdSlot *slot = [[BUAdSlot alloc]init];
@@ -31,12 +38,17 @@
     slot.ID = @"103451679";
     self.splashAd = [[BUSplashAd alloc] initWithSlot:slot adSize:CGSizeZero];
     self.splashAd.delegate = self;
+    self.splashAd.mediation.customBottomView = bottomView;
     [self.splashAd loadAdData];
 }
 
 - (void)showAd:(UIButton *)sender {
-    self.statusLabel.text = @"";
-    [self.splashAd showSplashViewInRootViewController:self.navigationController];
+    if (self.splashAd.mediation.isReady) {
+        [self.splashAd showSplashViewInRootViewController:self.navigationController];
+        self.statusLabel.text = @"广告已展示";
+    } else {
+        self.statusLabel.text = @"广告已过期";
+    }
 }
 
 

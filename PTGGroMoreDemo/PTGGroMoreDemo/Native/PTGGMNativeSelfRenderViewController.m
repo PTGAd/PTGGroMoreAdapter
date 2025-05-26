@@ -9,31 +9,22 @@
 #import <Masonry/Masonry.h>
 #import "PTGGMNativeSelfRenderCell.h"
 
-@interface PTGGMNativeSelfRenderViewController ()<BUNativeAdsManagerDelegate,UITableViewDataSource,UITableViewDelegate,PTGGMNativeSelfRenderDislikeDelgate,BUMNativeAdDelegate>
+@interface PTGGMNativeSelfRenderViewController ()<BUNativeAdsManagerDelegate,PTGGMNativeSelfRenderDislikeDelgate,BUMNativeAdDelegate>
 
 @property(nonatomic,strong)BUNativeAdsManager* adManager;
-@property(nonatomic,strong)NSMutableArray<BUNativeAd *> *ads;
-@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)BUNativeAd *nativeAd;
+@property(nonatomic,strong)UIView *nativeAdView;
 @end
 
 @implementation PTGGMNativeSelfRenderViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.showAdButton.hidden = YES;
-    self.ads = [NSMutableArray new];
-    [self addChildViewsAndLayout];
-}
 
-- (void)addChildViewsAndLayout {
-    [self.view insertSubview:self.tableView atIndex:0];
-    
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
 }
 
 - (void)loadAd:(UIButton *)sender {
+    self.statusLabel.text = @"广告加载中";
     BUAdSlot *slot1 = [[BUAdSlot alloc] init];
     slot1.ID = @"103453320";
     slot1.mediation.bidNotify = YES;
@@ -48,34 +39,28 @@
     [self.adManager loadAdDataWithCount:1];
 }
 
-- (void)showAd:(UIButton *)sender { }
-
-#pragma mark - UITableViewDataSource -
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.ads.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *identifier = NSStringFromClass(PTGGMNativeSelfRenderCell.class);
-    PTGGMNativeSelfRenderCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    BUNativeAd *ad = self.ads[indexPath.row];
-    cell.delegate = self;
-    [cell refreshUIWithModel:ad];
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [PTGGMNativeSelfRenderCell cellHeightWithModel:self.ads[indexPath.row] width:UIScreen.mainScreen.bounds.size.width];
+- (void)showAd:(UIButton *)sender {
+    if (self.nativeAd.mediation.isReady) {
+        self.statusLabel.text = @"广告已展示";
+        [self.nativeAdView removeFromSuperview];
+        PTGGMNativeSelfRenderCell *cell = [[PTGGMNativeSelfRenderCell alloc] init];
+        cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        CGFloat h = [PTGGMNativeSelfRenderCell cellHeightWithModel:self.nativeAd width:UIScreen.mainScreen.bounds.size.width];
+        cell.frame = CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, h);
+        cell.delegate = self;
+        [cell refreshUIWithModel:self.nativeAd];
+        self.nativeAdView = cell;
+        [self.view addSubview:cell];
+    } else {
+        self.statusLabel.text = @"广告已过期";
+    }
 }
 
 #pragma mark - PTGGMNativeSelfRenderDislikeDelgate -
 - (void)feedCustomDislike:(PTGGMNativeSelfRenderCell *)cell withNativeAd:(BUNativeAd *)nativeAd {
-    NSMutableArray *dataSources = [self.ads mutableCopy];
-    [dataSources removeObject:nativeAd];
-    self.ads = [[dataSources copy] mutableCopy];
-    [self.tableView reloadData];
+    self.nativeAd = nil;
+    [cell removeFromSuperview];
 }
 
 #pragma mark - BUNativeAdsManagerDelegate -
@@ -84,18 +69,17 @@
     if (nativeAdDataArray.count == 0) {
         return;
     }
+    self.nativeAd = nativeAdDataArray.firstObject;
+    self.statusLabel.text = @"广告加载成功";
     NSLog(@"信息流加载成功");
-    [nativeAdDataArray enumerateObjectsUsingBlock:^(BUNativeAd * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.rootViewController = self;
-        obj.delegate = self;
-        [obj render];
-    }];
-    [self.ads addObjectsFromArray:nativeAdDataArray];
-    [self.tableView reloadData];
+    self.nativeAd.rootViewController = self;
+    self.nativeAd.delegate = self;
+    [self.nativeAd render];
 }
 
 - (void)nativeAdsManager:(BUNativeAdsManager *)adsManager didFailWithError:(NSError *_Nullable)error {
     NSLog(@"信息流加载失败 error = %@",error);
+    self.statusLabel.text = @"广告加载失败";
 }
 
 /**
@@ -130,16 +114,38 @@
 }
 
 
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.backgroundColor = [UIColor clearColor];
-        [_tableView registerClass:PTGGMNativeSelfRenderCell.class forCellReuseIdentifier:NSStringFromClass(PTGGMNativeSelfRenderCell.class)];
-    }
-    return _tableView;
+- (void)nativeAdExpressViewRenderFail:(BUNativeAd * _Nonnull)nativeAd error:(NSError * _Nullable)error { 
+    
 }
+
+- (void)nativeAdExpressViewRenderSuccess:(BUNativeAd * _Nonnull)nativeAd { 
+    
+}
+
+- (void)nativeAdShakeViewDidDismiss:(BUNativeAd * _Nullable)nativeAd { 
+    
+}
+
+- (void)nativeAdVideo:(BUNativeAd * _Nullable)nativeAdView rewardDidCountDown:(NSInteger)countDown { 
+    
+}
+
+- (void)nativeAdVideo:(BUNativeAd * _Nullable)nativeAd stateDidChanged:(BUPlayerPlayState)playerState { 
+    
+}
+
+- (void)nativeAdVideoDidClick:(BUNativeAd * _Nullable)nativeAd { 
+    
+}
+
+- (void)nativeAdVideoDidPlayFinish:(BUNativeAd * _Nullable)nativeAd { 
+    
+}
+
+- (void)nativeAdWillPresentFullScreenModal:(BUNativeAd * _Nonnull)nativeAd { 
+    
+}
+
+
 
 @end

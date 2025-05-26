@@ -32,8 +32,13 @@
 }
 
 - (void)showAd:(UIButton *)sender {
-    self.statusLabel.text = @"";
-    [self.fullscreenVideoAd showAdFromRootViewController:self];
+    
+    if (self.fullscreenVideoAd.mediation.isReady) {
+        [self.fullscreenVideoAd showAdFromRootViewController:self];
+        self.statusLabel.text = @"广告已展示";
+    }  else {
+        self.statusLabel.text = @"广告已过期";
+    }
 }
 
 - (void)nativeExpressFullscreenVideoAdDidLoad:(BUNativeExpressFullscreenVideoAd *)fullscreenVideoAd {
@@ -48,6 +53,7 @@
  */
 - (void)nativeExpressFullscreenVideoAd:(BUNativeExpressFullscreenVideoAd *)fullscreenVideoAd didFailWithError:(NSError *_Nullable)error {
     NSLog(@"插屏广告加载失败");
+    self.statusLabel.text = @"广告加载失败";
 }
 
 /**
@@ -65,7 +71,7 @@
  */
 // Mediation:/// @Note :  (针对聚合维度广告)<6300版本不会回调该方法，>=6300开始会回调该方法，但不代表最终展示广告的渲染结果。
 - (void)nativeExpressFullscreenVideoAdViewRenderFail:(BUNativeExpressFullscreenVideoAd *)rewardedVideoAd error:(NSError *_Nullable)error {
-    
+    self.statusLabel.text = @"广告渲染失败";
 }
 
 /**
