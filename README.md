@@ -33,3 +33,6 @@ PTGGMInterstitialAdapter         插屏
 
 ### 横幅
 PTGGMBannerAdapter               banner
+
+### 激励
+PTGGMRewardedVideoAdapter
