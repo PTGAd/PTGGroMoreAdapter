@@ -4,9 +4,9 @@
 使用CocoaPods导入SDK
 
 ```shell
-pod 'PTGAdFramework', '2.2.72'
-pod 'PTGGroMoreAdapter','2.2.72.0'            
-pod 'Ads-CN-Beta', '~> 6.8.0.5', :subspecs => ['CSJMediation']
+pod 'PTGAdFramework', '2.2.80'
+pod 'PTGGroMoreAdapter','2.2.80.0'            
+pod 'Ads-CN', '~> 6.9.1.2', :subspecs => ['CSJMediation']
 ```
 
 ## 适配器相关
