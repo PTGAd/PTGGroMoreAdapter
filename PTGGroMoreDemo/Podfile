@@ -17,7 +17,7 @@ target 'PTGGroMoreDemo' do
   use_frameworks!
   pod 'Ads-CN', '6.9.1.2', :subspecs => ['CSJMediation']
   pod 'PTGAdFramework', '2.2.80'
-  pod 'PTGGroMoreAdapter','2.2.72.0'
+  pod 'PTGGroMoreAdapter','2.2.80.0'
   pod 'YYCategories'
   pod 'Masonry'
   pod 'SDWebImage'
