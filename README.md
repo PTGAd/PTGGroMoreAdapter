@@ -9,6 +9,9 @@ pod 'PTGGroMoreAdapter','2.2.80.0'
 pod 'Ads-CN', '~> 6.9.1.2', :subspecs => ['CSJMediation']
 ```
 
+## 使用适配器的媒体请注意：
+在广告展示前，需调用穿山甲广告是否有效，只有当mediation.isReady为YES时，才展示广告。否则会造成广告展示失败，可能会造成线上展示数据存在差异从而引起媒体收益数据差异。
+
 ## 适配器相关
 需要在GroMore后台添加自定义广告平台
 
