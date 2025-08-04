@@ -54,6 +54,7 @@
 - (void)nativeExpressFullscreenVideoAd:(BUNativeExpressFullscreenVideoAd *)fullscreenVideoAd didFailWithError:(NSError *_Nullable)error {
     NSLog(@"插屏广告加载失败");
     self.statusLabel.text = @"广告加载失败";
+    self.isLoading = NO;
 }
 
 /**

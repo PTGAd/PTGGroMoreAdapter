@@ -62,7 +62,7 @@
 /// This method is called when material load failed
 - (void)splashAdLoadFail:(BUSplashAd *)splashAd error:(BUAdError *_Nullable)error {
     NSLog(@"开屏加载失败 error = %@",error);
-    
+    self.isLoading = NO;
 }
 
 /// This method is called when splash view render successful
@@ -96,6 +96,7 @@
 /// This method is called when splash view is closed.
 - (void)splashAdDidClose:(BUSplashAd *)splashAd closeType:(BUSplashAdCloseType)closeType {
     NSLog(@"开屏关闭");
+    [self.splashAd.mediation.customBottomView removeFromSuperview];
 }
 
 /// This method is called when splash viewControllr is closed.
