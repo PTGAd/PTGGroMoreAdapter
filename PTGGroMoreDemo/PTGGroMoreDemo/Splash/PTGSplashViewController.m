@@ -56,7 +56,7 @@
 - (void)splashAdLoadSuccess:(BUSplashAd *)splashAd {
     self.isLoading = NO;
     self.statusLabel.text = @"广告加载成功";
-    NSLog(@"开屏加载成功 ecpm = %@",splashAd.mediation.getShowEcpmInfo.ecpm);
+    NSLog(@"开屏加载成功");
 }
 
 /// This method is called when material load failed
@@ -79,7 +79,7 @@
 
 /// This method is called when splash view will show
 - (void)splashAdWillShow:(BUSplashAd *)splashAd {
-    NSLog(@"开屏展示");
+    NSLog(@"开屏展示 ecpm = %@",splashAd.mediation.getShowEcpmInfo.ecpm);
 }
 
 /// This method is called when splash view did show

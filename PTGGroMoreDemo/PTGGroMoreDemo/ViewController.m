@@ -14,6 +14,7 @@
 #import "PTGGMNativeSelfRenderViewController.h"
 #import <AdSupport/AdSupport.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
+#import "PTGRewardVideoViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray<NSString *> *items;
@@ -30,6 +31,7 @@
         @"自渲染信息流",
         @"banner",
         @"插屏",
+        @"激励"
     ];
     [self addChildViewsAndLayout];
 }
@@ -83,6 +85,8 @@
         viewController = [[PTGBannerViewController alloc] init];
     } else if(indexPath.row == 4) {
         viewController = [[PTGInterstitialViewController alloc] init];
+    } else if(indexPath.row == 5) {
+        viewController = [[PTGRewardVideoViewController alloc] init];
     }
     viewController ? [self.navigationController pushViewController:viewController animated:YES] : nil;
 }

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for PTGGroMoreAdapter.  2.2.72.0
+//! Project version number for PTGGroMoreAdapter.
 FOUNDATION_EXPORT double PTGGroMoreAdapterVersionNumber;
 
 //! Project version string for PTGGroMoreAdapter.

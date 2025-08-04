@@ -93,7 +93,7 @@
  * Sent when an ad view is about to present modal content
  */
 - (void)nativeExpressAdViewWillShow:(BUNativeExpressAdView *)nativeExpressAdView {
-    NSLog(@"信息流展示成功");
+    NSLog(@"信息流展示成功 ecpm = %@",nativeExpressAdView.mediation.getShowEcpmInfo.ecpm);
 }
 
 /**

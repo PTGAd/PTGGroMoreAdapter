@@ -86,7 +86,7 @@
  This method is called when native ad slot has been shown.
  */
 - (void)nativeAdDidBecomeVisible:(BUNativeAd *)nativeAd {
-    NSLog(@"信息流展示成功");
+    NSLog(@"信息流展示成功 ecpm = %@",nativeAd.mediation.getShowEcpmInfo.ecpm);
 }
 
 /**

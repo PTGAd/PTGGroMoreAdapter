@@ -10,6 +10,7 @@
 		21AF7C06E34660128115E6F3 /* Pods_PTGGroMoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; };
 		9E1890282DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; };
 		9E1890292DB4D6470081D584 /* Pods_PTGGroMoreDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF6842268CA57C3056D5ACE9 /* Pods_PTGGroMoreDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E189C7A2E404C7E007365F2 /* PTGRewardVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189C782E404C7E007365F2 /* PTGRewardVideoViewController.m */; };
 		9E8569DF2DB4D4B100CE37CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D32DB4D4B100CE37CA /* Assets.xcassets */; };
 		9E8569E12DB4D4B100CE37CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D62DB4D4B100CE37CA /* LaunchScreen.storyboard */; };
 		9E8569E22DB4D4B100CE37CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8569D92DB4D4B100CE37CA /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		0BD4A0D0AC1A6E81112D9E13 /* Pods-PTGGroMoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGGroMoreDemo.release.xcconfig"; path = "Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6EB28D543F3B88D80E5DDD4E /* Pods-PTGGroMoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGGroMoreDemo.debug.xcconfig"; path = "Target Support Files/Pods-PTGGroMoreDemo/Pods-PTGGroMoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9E189C772E404C7E007365F2 /* PTGRewardVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGRewardVideoViewController.h; sourceTree = "<group>"; };
+		9E189C782E404C7E007365F2 /* PTGRewardVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGRewardVideoViewController.m; sourceTree = "<group>"; };
 		9E8569B42DB4D4A900CE37CA /* PTGGroMoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTGGroMoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8569D12DB4D4B100CE37CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E8569D22DB4D4B100CE37CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E189C792E404C7E007365F2 /* Reward */ = {
+			isa = PBXGroup;
+			children = (
+				9E189C772E404C7E007365F2 /* PTGRewardVideoViewController.h */,
+				9E189C782E404C7E007365F2 /* PTGRewardVideoViewController.m */,
+			);
+			path = Reward;
+			sourceTree = "<group>";
+		};
 		9E8569AB2DB4D4A900CE37CA = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +119,7 @@
 		9E8569DE2DB4D4B100CE37CA /* PTGGroMoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9E189C792E404C7E007365F2 /* Reward */,
 				9EA4A8B12DB61D12001F03D2 /* Native */,
 				9EA4A8702DB5E7D7001F03D2 /* Interstitial */,
 				9EA4A8682DB5DD7E001F03D2 /* Banner */,
@@ -327,6 +340,7 @@
 				9E8569E32DB4D4B100CE37CA /* AppDelegate.m in Sources */,
 				9EA4A8B42DB61D6C001F03D2 /* PTGGMNativeViewController.m in Sources */,
 				9E8569E42DB4D4B100CE37CA /* main.m in Sources */,
+				9E189C7A2E404C7E007365F2 /* PTGRewardVideoViewController.m in Sources */,
 				9EA4A8D82DB733B1001F03D2 /* BUDFeedStyleHelper.m in Sources */,
 				9E8569E62DB4D4B100CE37CA /* ViewController.m in Sources */,
 				9EA4A8672DB5DB39001F03D2 /* PTGSplashViewController.m in Sources */,

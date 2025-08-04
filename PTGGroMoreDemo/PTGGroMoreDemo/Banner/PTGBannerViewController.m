@@ -115,7 +115,7 @@ This method is called when the Ad view container is forced to be removed.
 }
 
 - (void)nativeExpressBannerAdViewDidBecomeVisible:(BUNativeExpressBannerView *)bannerAdView {
-    NSLog(@"banner展示");
+    NSLog(@"banner展示 ecpm = %@",bannerAdView.mediation.getShowEcpmInfo.ecpm);
 }
 
 
