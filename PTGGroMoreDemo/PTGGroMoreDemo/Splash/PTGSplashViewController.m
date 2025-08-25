@@ -62,6 +62,7 @@
 /// This method is called when material load failed
 - (void)splashAdLoadFail:(BUSplashAd *)splashAd error:(BUAdError *_Nullable)error {
     NSLog(@"开屏加载失败 error = %@",error);
+    self.statusLabel.text = @"广告加载失败";
     self.isLoading = NO;
 }
 
