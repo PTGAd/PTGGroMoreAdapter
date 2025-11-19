@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PTGGroMoreAdapter"
-  spec.version      = "2.2.80.0"
+  spec.version      = "2.2.94.0"
   spec.summary      = "A short description of PTGGroMoreAdapter."
 
 
