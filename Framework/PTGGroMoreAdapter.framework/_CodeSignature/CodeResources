@@ -6,7 +6,7 @@
 	<dict>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<data>
-		UUjEZquTh/5k/tKmMomu5LPzrtM=
+		VwMrlA8mtpDyRgQal6Po+WPvsI0=
 		</data>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -323,7 +323,7 @@
 		</data>
 		<key>CSJAdSDK.bundle/image_assets.json</key>
 		<data>
-		1NOILQatbZ0f57NnC3BSokUvrJ4=
+		/5uVpY+9lZYxdf8asLfRkwicqcM=
 		</data>
 		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
 		<dict>
@@ -389,7 +389,7 @@
 		</data>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<data>
-		1hAes5YEJGqRLZdMIUlq0u7Hnf0=
+		tRNotwZTHRmi5UYiQHkpWm1zwUc=
 		</data>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
 		<dict>
@@ -415,15 +415,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JfBEsZgVCoTLwbzJLTZHuKeQ+EI=
+		5KeSn2z3ic7DNjVDj9lSFSbhLlU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		gc3bubMp6zcMHdndwNuOxodyrHg=
-		</data>
-		<key>PTGAdSDK.bundle/1</key>
-		<data>
-		+SMirA8jTbG51bJJ3yh43FKnyr8=
 		</data>
 		<key>PTGAdSDK.bundle/ad.png</key>
 		<data>
@@ -469,6 +465,14 @@
 		<data>
 		OLZL9fT2Bg/ofBQnGtLqZL/Lf4g=
 		</data>
+		<key>VeLive.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		f7tABLrB9oK2NQF1kNJvG+RR3gc=
+		</data>
+		<key>ttplayer.metallib</key>
+		<data>
+		GOHJXyboIM6vh5JicNZPOzq8Qyk=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -476,11 +480,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UUjEZquTh/5k/tKmMomu5LPzrtM=
+			VwMrlA8mtpDyRgQal6Po+WPvsI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			NneqvVOvF1oAvApAobJgq5eJm/vmGik2JiN1Ybwrllg=
+			2xbuWv4Ve2SuCADWRXcCF/eA/3azUJR/wwTe/RABVfE=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -1336,11 +1340,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1NOILQatbZ0f57NnC3BSokUvrJ4=
+			/5uVpY+9lZYxdf8asLfRkwicqcM=
 			</data>
 			<key>hash2</key>
 			<data>
-			QEdDslvZbP4I5lHP1NIBR51MtM2enwshApMXUtv8eJs=
+			fEFQMUuHScRxgdE9MaLc2W2aqqdyFA1fWRuiSSsotG4=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
@@ -1494,11 +1498,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1hAes5YEJGqRLZdMIUlq0u7Hnf0=
+			tRNotwZTHRmi5UYiQHkpWm1zwUc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZeQGeHyGZA3LA5QgPC1fDAtbZRuzwvwFzoqa+ND7vxY=
+			hPyL6j0Cz/eXV1Ll0SQ0kPARrFVl4T/9H5vDK/n2L84=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
@@ -1547,17 +1551,6 @@
 			<key>hash2</key>
 			<data>
 			1TL8FxE4GPo6TNUuALZyh3wFQacvVYwdEsWTst8KiVM=
-			</data>
-		</dict>
-		<key>PTGAdSDK.bundle/1</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+SMirA8jTbG51bJJ3yh43FKnyr8=
-			</data>
-			<key>hash2</key>
-			<data>
-			31Xp8l41kytthUtQtzqGqqUH5vv1cj9XpRyQQ6P2ldk=
 			</data>
 		</dict>
 		<key>PTGAdSDK.bundle/ad.png</key>
@@ -1679,6 +1672,28 @@
 			<key>hash2</key>
 			<data>
 			cwRZIZ0qFQful29yEx4Q4f1qXiM26tktcOpZmsn6T3Q=
+			</data>
+		</dict>
+		<key>VeLive.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			f7tABLrB9oK2NQF1kNJvG+RR3gc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Q3VRH0z1+tx2WuPB5YpySUWeeN8GH1ZVQOG2AWloBtU=
+			</data>
+		</dict>
+		<key>ttplayer.metallib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GOHJXyboIM6vh5JicNZPOzq8Qyk=
+			</data>
+			<key>hash2</key>
+			<data>
+			yOkqQcrkH4IvAsqk7zgZy/UkavfZTREXIgpRvQKxo4w=
 			</data>
 		</dict>
 	</dict>
