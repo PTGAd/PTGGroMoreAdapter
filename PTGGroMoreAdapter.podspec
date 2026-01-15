@@ -30,6 +30,9 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'UIKit', 'MapKit', 'WebKit', 'MediaPlayer', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate', 'CoreGraphics', 'Security'
   spec.libraries = 'c++', 'resolv', 'z', 'sqlite3'
   spec.vendored_frameworks =  'Framework/PTGGroMoreAdapter.framework'
+  spec.static_framework = true
+  
+
   valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
   spec.xcconfig = {
     'VALID_ARCHS' =>  valid_archs.join(' '),
