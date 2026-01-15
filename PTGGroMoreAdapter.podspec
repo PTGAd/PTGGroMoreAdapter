@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "PTGGroMoreAdapter"
   spec.version      = "2.3.0.0"
-  spec.summary      = "A short description of PTGGroMoreAdapter."
+  spec.summary      = "GroMore 平台 Fancy 广告适配器"
 
 
   spec.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
 
   spec.homepage     = "https://github.com/PTGAd/PTGGroMoreAdapter"
 
-  spec.license      = "MIT"
+  spec.license      = { :type => "MIT" }
 
 
   spec.author             = { "fancy" => "ptg_all@fancydigital.com.cn" }
@@ -26,16 +26,22 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/PTGAd/PTGGroMoreAdapter.git", :tag => "#{spec.version }" }
 
 
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "15.0"
   spec.frameworks = 'UIKit', 'MapKit', 'WebKit', 'MediaPlayer', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate', 'CoreGraphics', 'Security'
   spec.libraries = 'c++', 'resolv', 'z', 'sqlite3'
   spec.vendored_frameworks =  'Framework/PTGGroMoreAdapter.framework'
   spec.static_framework = true
-  
 
-  valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
-  spec.xcconfig = {
-    'VALID_ARCHS' =>  valid_archs.join(' '),
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
   }
+
+  spec.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+  }
+
+  spec.dependency 'PTGAdFramework'
+  spec.dependency 'Ads-CN-Beta/BUAdSDK'
+  spec.dependency 'Ads-CN-Beta/CSJMediation'
 
 end
